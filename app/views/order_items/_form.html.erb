@@ -1,0 +1,39 @@
+<%= form_for([@order, @order_item], html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @order_item.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@order_item.errors.count, "error") %> prohibited this order_item from being saved:</h4>
+
+      <ul>
+      <% @order_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :product, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.select :product_id, Product.all.collect{|p|
+                      [p.name, p.id]},{:prompt => 'Selecione'}, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :price, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :price, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :quantity, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :quantity, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit 'Salvar', class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

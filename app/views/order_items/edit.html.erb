@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to order_order_items_path(@order), class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Voltar
+  <% end %>
+  <%= link_to order_order_item_path(@order, @order_item), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Mostrar
+  <% end %>
+  <h1>Editando item pedido</h1>
+</div>
+
+<%= render 'form' %>

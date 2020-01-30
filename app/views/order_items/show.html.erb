@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to order_order_items_path(@order), class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Voltar
+  <% end %>
+  <%= link_to edit_order_order_item_path(@order, @order_item), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Mostrar item pedido</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Order:</dt>
+  <dd><%= @order_item.order.id %></dd>
+
+  <dt>Product:</dt>
+  <dd><%= @order_item.product.name %></dd>
+
+  <dt>Price:</dt>
+  <dd><%= @order_item.price %></dd>
+
+  <dt>Quantity:</dt>
+  <dd><%= @order_item.quantity %></dd>
+
+</dl>

@@ -1,0 +1,20 @@
+<div class="page-header">
+  <%= link_to orders_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Voltar
+  <% end %>
+  <%= link_to edit_order_path(@order), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Mostrar order</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Customer:</dt>
+  <dd><%= @order.customer.name %></dd>
+
+  <dt>Total price:</dt>
+  <dd><%= @order.total_price %></dd>
+
+</dl>
