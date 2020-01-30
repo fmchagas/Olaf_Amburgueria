@@ -1,0 +1,44 @@
+<div class="page-header">
+  <%= link_to customers_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Voltar
+  <% end %>
+  <%= link_to edit_customer_path(@customer), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Editar
+  <% end %>
+  <h1>Mostrar customer</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @customer.name %></dd>
+
+  <dt>Cpf:</dt>
+  <dd><%= @customer.cpf %></dd>
+
+  <dt>Phone:</dt>
+  <dd><%= @customer.phone %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @customer.email %></dd>
+
+  <dt>Address:</dt>
+  <dd><%= @customer.address %></dd>
+
+  <dt>Number:</dt>
+  <dd><%= @customer.number %></dd>
+
+  <dt>District:</dt>
+  <dd><%= @customer.district %></dd>
+
+  <dt>Zip:</dt>
+  <dd><%= @customer.zip %></dd>
+
+  <dt>City:</dt>
+  <dd><%= @customer.city %></dd>
+
+  <dt>State:</dt>
+  <dd><%= @customer.state %></dd>
+
+</dl>
