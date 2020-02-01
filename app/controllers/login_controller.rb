@@ -1,5 +1,5 @@
 class LoginController < ApplicationController
-  skip_before_action :verify_authenticity_token, :valid_logged
+  skip_before_action :verify_authenticity_token, :valid_logged_admin
 
   layout 'login'
 

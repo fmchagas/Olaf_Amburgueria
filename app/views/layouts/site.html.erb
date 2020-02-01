@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="Fernando Macedo das Chagas">
-  <title>Olaf Amburgueria Admin</title>
+  <title>Olaf Amburgueria e-Commerce</title>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -27,32 +27,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to "Olaf Amburgueria Admin", "/admin", class: "navbar-brand" %>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li <% if params["controller"] == "home" %> class="active" <% end %> >
-            <a href="/home">Home</a>
-          </li>
-          <li <% if params["controller"] == "tipe_products" %> class="active" <% end %>>
-            <a href="/tipe_products">Tipo produtos</a>
-          </li>
-          <li <% if params["controller"] == "products" %> class="active" <% end %> >
-            <a href="/products">Produtos</a>
-          </li>
-          <li <% if params["controller"] == "customers" %> class="active" <% end %> >
-            <a href="/customers">Clientes</a>
-          </li>
-           <li <% if params["controller"] == "orders" %> class="active" <% end %> >
-            <a href="/orders">Pedidos</a>
-          </li>
-          <li <% if params["controller"] == "administrators" %> class="active" <% end %> >
-            <a href="/administrators">Admin</a>
-          </li>
-          <li class="active">
-            <a href="/login/logout">Sair</a>
-          </li>
-        </ul>
+        <%= link_to "Olaf Amburgueria e-Commerce", "/", class: "navbar-brand" %>
       </div>
     </div>
   </nav>
