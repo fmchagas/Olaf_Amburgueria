@@ -14,5 +14,11 @@ Rails.application.routes.draw do
   post '/login/logar', to: 'login#logar'
   get '/login/logout', to: 'login#logout'
 
+  get '/home/product/:product_id', to: 'home#show_product'
+  get '/home/product/:product_id/add', to: 'home#add'
+  get '/home/product/:product_id/remove', to: 'home#remove'
+
+  get '/home/cart', to: 'home#cart'
+
   root to: 'home#index'
 end
