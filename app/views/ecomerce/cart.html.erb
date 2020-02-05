@@ -23,9 +23,9 @@
               </div>
               <div class="card-footer">
                 <% if shop_cart?(product.id) %>
-                  <a href="/home/product/<%= product.id %>/remove" style="color: red">Remover carrinho</a>
+                  <a href="/ecomerce/cart/<%= product.id %>/remove" style="color: red">Remover carrinho</a>
                 <% else %>
-                  <a href="/home/product/<%= product.id %>/add">Adicionar carrinho</a>
+                  <a href="/ecomerce/cart/<%= product.id %>/add">Adicionar carrinho</a>
                 <% end %>
               </div>
             </div>
@@ -34,5 +34,5 @@
   <% end %>
 </div>
 <div class="row">
-    <a href="/home/cart/pay" class="btn btn-success btn-lg btn-block mb-2">Fechar compra</a>
+    <a href="/ecomerce/cart/pay" class="btn btn-success btn-lg btn-block mb-2">Fechar compra</a>
 </div>

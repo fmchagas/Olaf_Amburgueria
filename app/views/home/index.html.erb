@@ -49,12 +49,12 @@
         <% @products.each do |product| %>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="/product/<%= product.id %>">
+              <a href="/ecomerce/product/<%= product.id %>">
                 <img class="card-img-top" src="<%= product.image %>" alt="<%= product.name %>">
               </a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="/home/product/<%= product.id %>"><%= product.name %></a>
+                  <a href="/ecomerce/product/<%= product.id %>"><%= product.name %></a>
                 </h4>
                 <h5>R$<%= product.price %></h5>
                 <p class="card-text">
@@ -63,9 +63,9 @@
               </div>
               <div class="card-footer">
                 <% if shop_cart?(product.id) %>
-                  <a href="/home/product/<%= product.id %>/remove" style="color: red">Remover carrinho</a>
+                  <a href="/ecomerce/cart/<%= product.id %>/remove" style="color: red">Remover carrinho</a>
                 <% else %>
-                  <a href="/home/product/<%= product.id %>/add">Adicionar carrinho</a>
+                  <a href="/ecomerce/cart/<%= product.id %>/add">Adicionar carrinho</a>
                 <% end %>
               </div>
             </div>
