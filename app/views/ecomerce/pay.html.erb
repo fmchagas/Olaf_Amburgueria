@@ -1,1 +1,19 @@
-TODO HTML Pay
+<div class="pagamento">
+
+  <div class="row">
+    <h1>Carrinho</h1>
+  </div>
+  <hr>
+  <div class="row">
+    <ul>
+      <% @products.each do |product| %>
+        <li>
+          <%= product.name %> - R$<%= product.price %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <h1>
+    Valor total: R$ <%= @products.sum(:price).round(2) %>
+  </h1>
+</div>

@@ -38,28 +38,28 @@
           <li class="nav-item">
             <a class="nav-link" href="/ecomerce/cart">Carrinho (<%= quantity_cart %>)</a>
           </li>
-          <% #if cliente_logado? %>
+          <% if customer_logged? %>
             <li class="nav-item">
-              <a class="nav-link" href="/cliente/cadastrar">Perfil</a>
+              <a class="nav-link" href="/customer/new">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/cliente/sair">Sair</a>
+              <a class="nav-link" href="/customer/logout">Sair</a>
             </li>
-          <% #else %>
+          <% else %>
             <li class="nav-item">
-              <a class="nav-link" href="/cliente/logar">Login</a>
+              <a class="nav-link" href="/customer/logar">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/cliente/cadastrar">Cadastro</a>
+              <a class="nav-link" href="/customer/new">Cadastro</a>
             </li>
-          <% #end %>
+          <% end %>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Page Content -->
-  <div class="container" style="padding-top: 20px;">
+  <div class="container mt-3" style="padding-top: 20px;">
     <% flash.each do |name, msg| %>
       <%= content_tag :div, class: "alert alert-#{ name.to_s == "error" ? "danger" : "success" } alert-dismissable", role: "alert" do %>
         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>

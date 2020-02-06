@@ -19,6 +19,13 @@ Rails.application.routes.draw do
   get '/ecomerce/cart/:product_id/remove', to: 'ecomerce#remove'
   get '/ecomerce/cart', to: 'ecomerce#cart'
   get '/ecomerce/cart/pay', to: 'ecomerce#pay'
+  get '/customer/logar', to: 'ecomerce#login_customer'
+  post '/customer/login', to: 'ecomerce#login'
+  get '/customer/new', to: 'ecomerce#new'
+  post '/customer/create', to: 'ecomerce#create'
+  patch '/customer/create', to: 'ecomerce#create'
+  get '/customer/logout', to: 'ecomerce#logout'
+  
 
   root to: 'home#index'
 end

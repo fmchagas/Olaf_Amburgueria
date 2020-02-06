@@ -11,4 +11,11 @@ module EcomerceHelper
 
     JSON.parse(cookies[:cart]).length
   end
+
+  def customer_logged?
+    return false if cookies[:customer_login].blank?
+
+    c = JSON.parse(cookies[:customer_login])
+    Customer.where(id: c["id"]).count > 0
+  end
 end
