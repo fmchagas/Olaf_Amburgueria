@@ -18,4 +18,9 @@ module EcomerceHelper
     c = JSON.parse(cookies[:customer_login])
     Customer.where(id: c["id"]).count > 0
   end
+
+  def customer
+    c = JSON.parse(cookies[:customer_login])
+    Customer.find(c["id"])
+  end
 end
