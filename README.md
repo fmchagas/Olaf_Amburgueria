@@ -1,24 +1,12 @@
-# README
+# Olaf Aamburgueria
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Olaf Aamburgueria é um mini e-comerce contendo admin, e-comerce, cart e login de usuário desenvolvido nos tempos livres com objetivo de fixar os conhecimento aprendido na liguaguem Ruby e Framework rails.
 
-Things you may want to cover:
+Tecnologias utilizada
+-------------
 
-* Ruby version
+* Ruby version 2.6.3
+* Framework Rails 5.2.4.1
+* Database SQLite3
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*GNU/Linux operating system
